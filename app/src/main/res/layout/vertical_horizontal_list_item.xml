@@ -37,10 +37,49 @@
                The width should match the with of the card
                The scaleType should be set to centerCrop-->
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <!-- TODO: Create a TextView for each of the following:
                 The dog's name
                 The dog's age
                 The dog's hobbies-->
+        <TextView
+            android:id="@+id/textName"
+            style="@style/Widget.Dogglers.TextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingBottom="16dp"
+            tools:text="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/textAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/textName"
+            app:layout_constraintTop_toBottomOf="@+id/textName"
+            tools:text="@string/dog_age"
+            android:paddingBottom="8dp"
+            style="@style/Widget.Dogglers.TextAge"/>
+
+        <TextView
+            android:id="@+id/textHobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textName"
+            tools:text="@string/dog_hobbies"
+            android:layout_marginEnd="8dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
